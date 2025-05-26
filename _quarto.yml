@@ -10,6 +10,8 @@ website:
         text: Home
       - about.qmd
       - ProjectPage.qmd
+      - Freeforall.qmd
+      - Resume.qmd 
       
 
 format:
