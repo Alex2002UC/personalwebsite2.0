@@ -1,12 +1,32 @@
 ---
-title: "personalwebsite2.0"
+title: "Alexa Andrade"
+about: 
+ template: broadside 
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+### This content appears above the formatted about page content.
+
+:::{#hero-heading}
+
+Hi! I'm Alexa Andrade, a passionate environmentalist interested in science communication and data storytelling.
+
+Welcome to my Quarto website! 
+
+## Education
+
+University of California, Santa Barbara | Santa Barbara, CA
+BS Environmental Studies | Sept 2021 - June 2025
+
+## Experience
+
+Wengo Analytics | Head Data Scientist | April 2018 - present
+
+GeoScynce | Chief Analyst | Sept 2012 - April 2018
+
+:::
 
 ```{r}
-1 + 1
+
 ```
 
