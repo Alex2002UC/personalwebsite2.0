@@ -1,3 +1,9 @@
 ---
 title: "Resume"
 ---
+
+## Skills
+
+-   Data Visualization and statistical skills in R\
+-   Geographical Information Systems: QGIS and ArcGIS Pro\
+-   Dendrochronology

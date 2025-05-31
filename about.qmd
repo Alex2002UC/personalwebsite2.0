@@ -1,9 +1,33 @@
 ---
-title: "About"
+title: "About Me"
 ---
 
-About this site
+------------------------------------------------------------------------
 
-```{r}
-1 + 1
-```
+## Traveling
+
+I Love to travel and explore new places! I have been lucky enough to grow up in a family that also enjoys exploring, whether it be regional cities or far away countries. It is still my dream to have a job that gives me the opportunity to travel a couple weeks out of the year. Some of the places I've been include the Bahamas, Mexico, New York, and Florida. 
+
+![View on Maui](images/HawaiiT.png)
+![Cancun](images/CancunT.png)
+![Cloudy New York](images/NYT.png)
+
+------------------------------------------------------------------------
+
+## Pets 
+I am a dog lover, and I will continue to be one for the rest of my life. When I was younger I grew up with two brother Lhasa Ahpsos that were small but mighty. I love how dogs have combine loyalty and constant love, in a way that truly makes them life companions. I currently have a young 4 year old Springer Spaniel named Traviesa, otherwise known as Naughty in english. I love to spend time with her on walks or playing her favorite pass time: fetch. 
+
+![Traviesa](images/Truff1.png) 
+![](images/Truff2.png)
+![](images/Truff3.png)
+
+------------------------------------------------------------------------
+
+## Hometwon
+I am a southern Californian at heart, and I grew up in a suburban town called West Covina, or what I like to call-The best Covina. West Covina is a city in Los Angeles county that has a population of about 109,000. West Covina is famous for being the shooting location of the show "Crazy Ex-Girlfriend", and 
+the movie "Good Burger". 
+
+![](images/WC1.png)
+![](images/WC2.png)
+![](images/WC3.png)
+

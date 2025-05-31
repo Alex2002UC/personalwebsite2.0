@@ -1,30 +1,72 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "about.html#traveling",
+    "href": "about.html#traveling",
+    "title": "About Me",
+    "section": "Traveling",
+    "text": "Traveling\nI Love to travel and explore new places! I have been lucky enough to grow up in a family that also enjoys exploring, whether it be regional cities or far away countries. It is still my dream to have a job that gives me the opportunity to travel a couple weeks out of the year. Some of the places I’ve been include the Bahamas, Mexico, New York, and Florida."
+  },
+  {
+    "objectID": "about.html#pets",
+    "href": "about.html#pets",
+    "title": "About Me",
+    "section": "Pets",
+    "text": "Pets\nI am a dog lover, and I will continue to be one for the rest of my life. When I was younger I grew up with two brother Lhasa Ahpsos that were small but mighty. I love how dogs have combine loyalty and constant love, in a way that truly makes them life companions. I currently have a young 4 year old Springer Spaniel named Traviesa, otherwise known as Naughty in english. I love to spend time with her on walks or playing her favorite pass time: fetch."
+  },
+  {
+    "objectID": "about.html#hometwon",
+    "href": "about.html#hometwon",
+    "title": "About Me",
+    "section": "Hometwon",
+    "text": "Hometwon\nI am a southern Californian at heart, and I grew up in a suburban town called West Covina, or what I like to call-The best Covina. West Covina is a city in Los Angeles county that has a population of about 109,000. West Covina is famous for being the shooting location of the show “Crazy Ex-Girlfriend”, and the movie “Good Burger”."
+  },
+  {
+    "objectID": "Resume.html",
+    "href": "Resume.html",
+    "title": "Resume",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Data Visualization and statistical skills in R\n\nGeographical Information Systems: QGIS and ArcGIS Pro\n\nDendrochronology"
+  },
+  {
+    "objectID": "Resume.html#skills",
+    "href": "Resume.html#skills",
+    "title": "Resume",
+    "section": "",
+    "text": "Data Visualization and statistical skills in R\n\nGeographical Information Systems: QGIS and ArcGIS Pro\n\nDendrochronology"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Alexa Andrade",
     "section": "",
-    "text": "Hi! I’m Alexa Andrade, a passionate environmentalist interested in science communication and data storytelling.\nWelcome to my Quarto website!\n\n\nUniversity of California, Santa Barbara | Santa Barbara, CA BS Environmental Studies | Sept 2021 - June 2025\n\n\n\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
+    "text": "Hi! I’m Alexa Andrade, a passionate environmentalist interested in science communication and data storytelling. I really love the learning as a process, and I always strive to improve my skills and capabilities as a person."
+  },
+  {
+    "objectID": "index.html#welcome-to-my-quarto-website",
+    "href": "index.html#welcome-to-my-quarto-website",
+    "title": "Alexa Andrade",
+    "section": "",
+    "text": "Hi! I’m Alexa Andrade, a passionate environmentalist interested in science communication and data storytelling. I really love the learning as a process, and I always strive to improve my skills and capabilities as a person."
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
     "title": "Alexa Andrade",
-    "section": "",
-    "text": "University of California, Santa Barbara | Santa Barbara, CA BS Environmental Studies | Sept 2021 - June 2025"
+    "section": "Education",
+    "text": "Education\nUniversity of California, Santa Barbara\nSanta Barbara, CA\nBS Environmental Studies\nSept 2021 - June 2025"
   },
   {
     "objectID": "index.html#experience",
     "href": "index.html#experience",
     "title": "Alexa Andrade",
+    "section": "Experience",
+    "text": "Experience\nUCSB Miller Marine Science Lab\nLab Intern\nSeptember 2023 - April 2024\nUCSB Aquatic Invertebrate Lab\nLab Intern\nApril 2024 - June 2024\nJoan Dudney Landscapes of Change Lab\nResearch Assistant\nAugust 2024 - Present"
+  },
+  {
+    "objectID": "Freeforall.html",
+    "href": "Freeforall.html",
+    "title": "What I Do For Fun",
     "section": "",
-    "text": "Wengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
+    "text": "#"
   }
 ]

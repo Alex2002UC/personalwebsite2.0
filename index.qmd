@@ -1,54 +1,51 @@
 ---
 title: "Alexa Andrade"
-image: images/headshot.jpeg
+image: images/headshot.png 
 toc: false
 about: 
  template: broadside 
- image-shape: rectangle
- image-width: 17em
+ image-shape: rounded
+ image-width: 30 em
  links:
+    - icon: linkedin
     - text: LinkedIn
       href: https://www.linkedin.com/in/alexa-andrade-9a6997264/
+    - icon: github
     - text: GitHub
       href: https://github.com/Alex2002UC 
+    - icon: inbox
     - text: Email
-      href: malito : alexaandradecareer@gmail.com 
- 
+      href: mailto:alexaandradecareer@gmail.com 
+
 ---
 
+## Welcome to my Quarto website!
 
-### This content appears above the formatted about page content.
+Hi! I’m Alexa Andrade, a passionate environmentalist interested in science communication and data storytelling. I really love the learning as a process, and I always strive to improve my skills and capabilities as a person.
 
-:::{#hero-heading}
-
-Hi! I'm Alexa Andrade, a passionate environmentalist interested in science communication and data storytelling. I really love the learning as a process, and I always strive to improve my skills and capabilities as a person. 
-
-Welcome to my Quarto website! 
+------------------------------------------------------------------------
 
 ## Education
 
-University of California, Santa Barbara | Santa Barbara, CA
-BS Environmental Studies | Sept 2021 - June 2025
+**University of California, Santa Barbara**  
+Santa Barbara, CA  
+**BS Environmental Studies**  
+*Sept 2021 - June 2025*
+
+------------------------------------------------------------------------
 
 ## Experience
 
-UCSB Miller Marine Science Lab | Lab Intern | September 2023 - April 2024
+**UCSB Miller Marine Science Lab**  
+Lab Intern  
+*September 2023 - April 2024*
 
-UCSB Aquatic Invertebrate Lab | Lab Intern | April 2024 - June 2024
+**UCSB Aquatic Invertebrate Lab**  
+Lab Intern  
+*April 2024 - June 2024*
 
-Joan Dudney Landscapes of Change Lab | Research Assistant | August 2024 - present
+**Joan Dudney Landscapes of Change Lab**  
+Research Assistant  
+*August 2024 - Present*
 
-## Skills 
-
-Data Visualization and statistical skills in R 
-
-Geographical Informational System- QGIS and ArcgisPro
-
-Dendrochronology
-
-:::
-
-```{r}
-
-```
 
