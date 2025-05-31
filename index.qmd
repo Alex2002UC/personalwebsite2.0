@@ -1,7 +1,19 @@
 ---
 title: "Alexa Andrade"
+image: images/headshot.jpeg
+toc: false
 about: 
  template: broadside 
+ image-shape: rectangle
+ image-width: 17em
+ links:
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/alexa-andrade-9a6997264/
+    - text: GitHub
+      href: https://github.com/Alex2002UC 
+    - text: Email
+      href: malito : alexaandradecareer@gmail.com 
+ 
 ---
 
 
@@ -9,7 +21,7 @@ about:
 
 :::{#hero-heading}
 
-Hi! I'm Alexa Andrade, a passionate environmentalist interested in science communication and data storytelling.
+Hi! I'm Alexa Andrade, a passionate environmentalist interested in science communication and data storytelling. I really love the learning as a process, and I always strive to improve my skills and capabilities as a person. 
 
 Welcome to my Quarto website! 
 
@@ -20,9 +32,19 @@ BS Environmental Studies | Sept 2021 - June 2025
 
 ## Experience
 
-Wengo Analytics | Head Data Scientist | April 2018 - present
+UCSB Miller Marine Science Lab | Lab Intern | September 2023 - April 2024
 
-GeoScynce | Chief Analyst | Sept 2012 - April 2018
+UCSB Aquatic Invertebrate Lab | Lab Intern | April 2024 - June 2024
+
+Joan Dudney Landscapes of Change Lab | Research Assistant | August 2024 - present
+
+## Skills 
+
+Data Visualization and statistical skills in R 
+
+Geographical Informational System- QGIS and ArcgisPro
+
+Dendrochronology
 
 :::
 
