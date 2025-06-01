@@ -2,8 +2,12 @@
 title: "Resume"
 ---
 
-## Skills
+## My most recent Resume
 
--   Data Visualization and statistical skills in R\
--   Geographical Information Systems: QGIS and ArcGIS Pro\
--   Dendrochronology
+<iframe src="PDF/Andrade_resume.pdf" width="100%" height="600px" style="border: none;">
+
+This browser does not support PDFs. Please download the PDF instead: <a href="files/Alexa_Resume.pdf">Download PDF</a>
+
+</iframe>
+
+## 
