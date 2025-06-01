@@ -1,5 +1,103 @@
 ---
-title: "index"
+title: "Average time Spent Cooking throughout the week"
 format: html
+description: "A visulization of personal data I collected through the Spring 2025 quarter"
+author:
+  - name: Alexa Andrade
+    url: https://samanthacsik.github.io/
+    orcid: 0000-0002-5300-3075
+    affiliation: UCSB
+    affiliation-url: https://ucsb-meds.github.io/ 
+date: 05-31-2025
+categories: [Quarto, R, MEDS] # self-defined categories
+citation: 
+  url: https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/ 
+image: preview-image.png
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 ---
 
+## Code that displays the summary of my data:
+
+```{r}
+
+Cooking_clean <- read_xlsx(here("Data", "Cooking_timeF.xlsx")) |> 
+clean_names()
+
+#Creating a summary 
+Cooking_summary <- Cooking_clean |> 
+  group_by(school_day) |> 
+  summarise(
+    mean = mean(minutes_spent_cooking_min),        # Calculate mean moss height
+    n = n(),                              # Count number of observations
+    sd = sd(minutes_spent_cooking_min),            # Calculate standard deviation
+    se = sd / sqrt(n),                   # Calculate standard error
+    ci_lower = mean - qt(0.975, df = n - 1) * se,  # 95% CI lower bound
+    ci_upper = mean + qt(0.975, df = n - 1) * se   # 95% CI upper bound
+  ) |>
+  mutate(
+    across(c(mean, sd, se, ci_lower, ci_upper), ~round(.x, 1))  # Round values
+  ) |>
+  select(school_day, mean, sd, se, ci_lower, ci_upper)  # Select final columns
+
+Cooking_summary <- Cooking_summary |> #Renaming the categories in school_day column 
+  mutate(school_day = recode(school_day,
+                             "N" = "Non-School Day",
+                             "Y" = "School Day"))
+
+Cooking_summary |>
+  flextable() |>
+  set_header_labels(
+    school_day = "Status of Day",
+    mean = "Mean",
+    sd = "Standard Deviation",
+    se = "Standard Error",
+    ci_lower = "95% CI Lower",
+    ci_upper = "95% CI Upper"
+  ) |>
+  set_caption("Summary Statistics of Cooking Time by School Day") |>
+  autofit()
+
+
+
+```
+
+## Utilizing a jitter plot to Display the means of my two categories: School Day and Non-School Day
+
+```{r}
+
+table(Cooking_summary$school_day, useNA = "always")
+
+Cooking_clean <- Cooking_clean %>%
+  mutate(school_day = recode(school_day,
+                             "Y" = "School Day",
+                             "N" = "Non-School Day"))
+
+ggplot(data = Cooking_clean, aes(x = school_day, y = minutes_spent_cooking_min, fill = school_day)) +
+  geom_jitter(width = 0.2, height = 0, alpha = 0.6, shape = 21, color = "black") +
+  
+  geom_errorbar(data = Cooking_summary, 
+                aes(x = school_day, ymin = mean - se, ymax = mean + se), 
+                width = 0.2,
+                inherit.aes = FALSE,
+                color = "black") +
+  
+  geom_point(data = Cooking_summary, 
+             aes(x = school_day, y = mean),
+             inherit.aes = FALSE,
+             color = "black", 
+             size = 3) +
+  
+  labs(x = "Status of Day", 
+       y = "Average Time Spent Cooking (min)", 
+       title = "Mean Time Spent Cooking During the Week",
+       subtitle = "Alexa Andrade") +
+  
+  scale_fill_manual(values = c("School Day" = "steelblue", "Non-School Day" = "red")) +
+  theme_light(base_size = 16) +
+  theme(panel.grid = element_blank(),
+        panel.background = element_rect(fill = "white", color = NA),
+        plot.background = element_rect(fill = "white", color = NA),
+        legend.position = "none")
+
+
+```
