@@ -13,9 +13,10 @@ website:
       - Freeforall.qmd
       - Resume.qmd 
       
-
 format:
   html:
+    code-fold: true             # enables code folding
+    code-summary: "Show code"   # label for the toggle button
     theme:
       light: trestles
       dark: solar
@@ -24,6 +25,7 @@ format:
     page-layout: full
 
 editor: visual
+
 
 
 

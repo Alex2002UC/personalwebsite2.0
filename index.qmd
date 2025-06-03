@@ -3,7 +3,7 @@ title: "Alexa Andrade"
 image: images/headshot.png 
 toc: false
 about: 
- template: broadside 
+ template: marquee 
  image-shape: rounded
  image-width: 30 em
  links:

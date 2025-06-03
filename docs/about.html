@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -68,6 +102,18 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.2.2/leaflet-providers-plugin.js"></script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -128,6 +174,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#traveling" id="toc-traveling" class="nav-link active" data-scroll-target="#traveling">Traveling</a></li>
+  <li><a href="#an-interactive-map-of-my-travel-destination" id="toc-an-interactive-map-of-my-travel-destination" class="nav-link" data-scroll-target="#an-interactive-map-of-my-travel-destination">An Interactive Map of my Travel Destination</a>
+  <ul class="collapse">
+  <li><a href="#feel-free-to-toggle-on-and-off-the-code-chunks" id="toc-feel-free-to-toggle-on-and-off-the-code-chunks" class="nav-link" data-scroll-target="#feel-free-to-toggle-on-and-off-the-code-chunks">Feel free to toggle on and off the code chunks!</a></li>
+  </ul></li>
   <li><a href="#pets" id="toc-pets" class="nav-link" data-scroll-target="#pets">Pets</a></li>
   <li><a href="#hometwon" id="toc-hometwon" class="nav-link" data-scroll-target="#hometwon">Hometwon</a></li>
   </ul>
@@ -160,7 +210,73 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="traveling">Traveling</h2>
 <p>I Love to travel and explore new places! I have been lucky enough to grow up in a family that also enjoys exploring, whether it be regional cities or far away countries. It is still my dream to have a job that gives me the opportunity to travel a couple weeks out of the year. Some of the places I’ve been include the Bahamas, Mexico, New York, and Florida.</p>
 <p><img src="images/HawaiiT.png" class="img-fluid" alt="View on Maui"> <img src="images/CancunT.png" class="img-fluid" alt="Cancun"> <img src="images/NYT.png" class="img-fluid" alt="Cloudy New York"></p>
+</section>
+<section id="an-interactive-map-of-my-travel-destination" class="level2">
+<h2 class="anchored" data-anchor-id="an-interactive-map-of-my-travel-destination">An Interactive Map of my Travel Destination</h2>
+<section id="feel-free-to-toggle-on-and-off-the-code-chunks" class="level3">
+<h3 class="anchored" data-anchor-id="feel-free-to-toggle-on-and-off-the-code-chunks">Feel free to toggle on and off the code chunks!</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Loading required libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)             </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)        </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmltools)      </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)  </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet.extras) </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(Travel <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Map2.csv"</span>) <span class="sc">|&gt;</span> <span class="fu">clean_names</span>())</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Check structure</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(Travel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>spc_tbl_ [5 × 3] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ place   : chr [1:5] "New York" "Cancun" "Maui" "Bahamas" ...
+ $ long    : num [1:5] -74 -86.9 -156.3 -77.4 -81.5
+ $ latitude: num [1:5] 40.7 21.2 20.8 25 27.7
+ - attr(*, "spec")=
+  .. cols(
+  ..   Place = col_character(),
+  ..   long = col_double(),
+  ..   latitude = col_double()
+  .. )
+ - attr(*, "problems")=&lt;externalptr&gt; </code></pre>
+</div>
+<details class="code-fold">
+<summary>Show code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>(<span class="at">data =</span> Travel) <span class="sc">%&gt;%</span> <span class="co">#creating leaflet from data </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">addProviderTiles</span>(<span class="st">"Esri.WorldImagery"</span>) <span class="sc">%&gt;%</span> <span class="co">#backround map </span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="sc">~</span>long, <span class="sc">~</span>latitude, <span class="at">popup =</span> <span class="sc">~</span>place)  <span class="sc">%&gt;%</span> <span class="co"># Adding markers to locations </span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">addLabelOnlyMarkers</span>(</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>long, <span class="sc">~</span>latitude,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="sc">~</span>place,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">labelOptions =</span> <span class="fu">labelOptions</span>(</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">noHide =</span> <span class="cn">TRUE</span>,        <span class="co"># makes label always be shown</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">direction =</span> <span class="st">'bottom'</span>, <span class="co">#Labelled on bottom of marker</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">textOnly =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">"color"</span> <span class="ot">=</span> <span class="st">"white"</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">"font-size"</span> <span class="ot">=</span> <span class="st">"12px"</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"font-weight"</span> <span class="ot">=</span> <span class="st">"bold"</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-4de64ef4253a1c511326" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-4de64ef4253a1c511326">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMarkers","args":[[40.7128,21.1619,20.7984,25.0343,27.6648],[-74,-86.8515,-156.3319,-77.3963,-81.5158],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["New York","Cancun","Maui","Bahamas","Florida"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[[40.7128,21.1619,20.7984,25.0343,27.6648],[-74,-86.8515,-156.3319,-77.3963,-81.5158],{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["New York","Cancun","Maui","Bahamas","Florida"],{"interactive":false,"permanent":true,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":true,"style":{"color":"white","font-size":"12px","font-weight":"bold"},"className":"","sticky":true},null]}],"limits":{"lat":[20.7984,40.7128],"lng":[-156.3319,-74]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 <hr>
+</section>
 </section>
 <section id="pets" class="level2">
 <h2 class="anchored" data-anchor-id="pets">Pets</h2>

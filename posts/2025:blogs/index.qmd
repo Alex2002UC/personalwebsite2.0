@@ -19,6 +19,17 @@ draft: false # setting this to `true` will prevent your post from appearing on y
 ## Code that displays the summary of my data:
 
 ```{r}
+library(tidyverse)
+library(here)
+library(gt)
+library(flextable)
+library(janitor)
+library(readxl)
+library(tidyverse)
+library(here)
+library(readxl)
+library(dplyr)
+library(flextable)
 
 Cooking_clean <- read_xlsx(here("Data", "Cooking_timeF.xlsx")) |> 
 clean_names()
