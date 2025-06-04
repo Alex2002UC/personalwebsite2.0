@@ -1,5 +1,8 @@
 ---
 title: "About Me"
+excecute: 
+  warning: false 
+  message: false 
 ---
 
 ------------------------------------------------------------------------
@@ -34,9 +37,6 @@ library(tidyverse)
 
 
 invisible(Travel <- read_csv("Map2.csv") |> clean_names())
-
-# Check structure
-str(Travel)
 
 
 leaflet(data = Travel) %>% #creating leaflet from data 
