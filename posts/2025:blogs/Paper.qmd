@@ -1,0 +1,22 @@
+---
+title: "The Unhealthy Relationship Between Humans and Wildlife in America"
+format: html
+description: A detailed report that discusses the current status of wildlife in America, as well as clarifies the lack of coexistance. The report also investigates potential solutions. 
+author:
+  - name: Alexa Andrade
+    affiliation: UCSB Undergraduate
+date: 06-04-2025
+image: Coyote.png 
+categories: [Reports]
+---
+
+This report was created originally during Fall quarter of 2024, at UCSB, for ENVS 116: Communities and Environmental Justice. I was inspired by my Hometown, West Covina, because coyotes are a daily occurrence. I never realized how many people viewed coyotes as pests or labelled them solely as dangerous. So, I wanted to explore how wildlife are treated around the US, and explore potential solutions. 
+
+
+<iframe src="ENVS116.pdf" width="100%" height="600px" style="border: none;">
+  This browser does not support PDFs.
+  <a href="ENVS116.pdf">Download PDF</a>
+</iframe> 
+
+
+

@@ -10,14 +10,17 @@ date: 05-31-2025
 categories: [Quarto, R] 
 citation: 
   url: https://alex2002uc.github.io/personalwebsite2.0/posts/2025:blogs/
-image: images/Cookblog.png
+image: Cookblog.png 
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
-excecute: 
+execute: 
   warning: false 
   message: false 
 ---
 
 Environmentalists work in many sectors, and are employed in a variety of roles that require different skill sets. Therefore, as an environmental science student, it is critical to equip myself for the future and the job market by developing new skills. ENVS 193DS did exactly that. 
+
+![](~/Desktop/Users:Alexa:git/personalwebsite2.0/posts/Cookblog.png) 
+
 
 The class built my foundation in coding in R, equiping me with the confidence to go one and fo my own personal project. This specific personal project was fostered by my curiosity: Do I on average spend more time cooking on school days or non school days? 
 
