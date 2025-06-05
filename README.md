@@ -6,7 +6,9 @@ Data and file information:
 All images used for all the website pages, except the blogs, are located within the images folder. My resume pdf is located within the pdf folder. The qmd files that are the tabs of my website are all just located in the root directory. The posts folder contains two more qmd files that serve as two blog posts, and also has the related images and pdfs used in those blogs. 
 
 
-Personalwebsite2.0
+
+```
+personalwebsite2.0
 |
 ├── Data
 │   └── Cooking_timeF.xlsx
@@ -120,6 +122,8 @@ Personalwebsite2.0
 │   └── _metadata.yml
 ├── styles.css
 └── styles.scss
+```
+
 
 
 Rendered Output: 
