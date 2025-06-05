@@ -4,35 +4,45 @@ title: "What I Do For Fun"
 
 ## I Love to Eat Different Cuisines
 
-As a Mexican American and someone who grew up in LA county, Mexican food is simply a part of my daily consumption. For me, the spices and flavors of Mexican food can never be replaced, as the taste provides me with an essence of home.However, being in LA county there are so many other cultures that are strongly present, that I joyfully will go on little micro-adventures to explore new foods. Recently, I've made it my mission to explore more resturaunts here in Santa Barbara while I still can. 
+As a Mexican American and someone who grew up in LA county, Mexican food is simply a part of my daily consumption. For me, the spices and flavors of Mexican food can never be replaced, as the taste provides me with an essence of home.However, being in LA county there are so many other cultures that are strongly present, that I joyfully will go on little micro-adventures to explore new foods. Recently, I've made it my mission to explore more resturaunts here in Santa Barbara while I still can.
+
+::: {layout-ncol="3"}
+
+::: {style="text-align: center;"}
+<img src="images/Food1.png" width="300"/>
+
+<p><em>**Sukiyaki** — A comforting Japanese hot pot soup that features salty sweet broth with meat, mushrooms, and Tofu. I ate this dish at Uniboil, in Goleta, CA. .</em></p>
+:::
 
 
-<div style="text-align: center;">
-  <img src="images/Food1.png" width="300"/>
-  <p><em>**Sukiyaki** — A comforting Japanese hot pot soup that features salty sweet broth with meat, mushrooms, and Tofu. I ate this dish at Uniboil, in Goleta, CA. .</em></p>
-</div>
+::: {style="text-align: center;"}
+<img src="images/Food2.png" width="300"/>
 
-<div style="text-align: center;">
-  <img src="images/Food2.png" width="300"/>
-  <p><em>**Southern Chinese Food** — I tried a new place in Santa Barbara called the Mandarin Palace. Here we ate Spicy noodles, pan fried bao, Beef Chow Fun, and Three treasures dishes. Super tasty and I learned more about Southern Chinese cuisine.</em></p>
-</div>
+<p><em>**Southern Chinese Food** — I tried a new place in Santa Barbara called the Mandarin Palace. Here we ate Spicy noodles, pan fried bao, Beef Chow Fun, and Three treasures dishes. Super tasty and I learned more about Southern Chinese cuisine.</em></p>
+:::
 
-<div style="text-align: center;">
-  <img src="images/Food3.png" width="300"/>
-  <p><em>**Korean Food** — I love going out with my family, and this timw we tried BCD tofu House in Koreatown, downtown LA. My favorites were the Bimbipap and Korean Seafood pancake.</em></p>
-</div>
+::: {style="text-align: center;"}
+<img src="images/Food3.png" width="300"/>
 
-<div style="text-align: center;">
-  <img src="images/Food4.png" width="300"/>
-  <p><em>**Chinese Food** — This is the resturaunt "Thumbling", located in West Covina. This is a staple in my family's rotation whenever we plan to eat out. We love to order the garlic Bok Choy, fried rice, chinese fried rice cooks, and soup dumplings.</em></p>
-</div>
+<p><em>**Korean Food** — I love going out with my family, and this timw we tried BCD tofu House in Koreatown, downtown LA. My favorites were the Bimbipap and Korean Seafood pancake.</em></p>
+:::
 
-<div style="text-align: center;">
-  <img src="images/Food5.png" width="300"/>
-  <p><em>**Tacos** — A traditional Mexican dish that everyone in California has eaten at least once. These specific tacos were eaten in San Diego during a friend trip, sadly I don't remember the specific place.</em></p>
-</div>
+::: {style="text-align: center;"}
+<img src="images/Food4.png" width="300"/>
 
-<div style="text-align: center;">
-  <img src="images/Food7.png" width="300"/>
-  <p><em>**Chorizo** — This is a dish that my mother will cook on very special occasions. Chorizo is seasoned pork sausage that we combine with a cubed potatoe to create a hearty savory dish.</em></p>
-</div>
+<p><em>**Chinese Food** — This is the resturaunt "Thumbling", located in West Covina. This is a staple in my family's rotation whenever we plan to eat out. We love to order the garlic Bok Choy, fried rice, chinese fried rice cooks, and soup dumplings.</em></p>
+:::
+
+::: {style="text-align: center;"}
+<img src="images/Food5.png" width="300"/>
+
+<p><em>**Tacos** — A traditional Mexican dish that everyone in California has eaten at least once. These specific tacos were eaten in San Diego during a friend trip, sadly I don't remember the specific place.</em></p>
+:::
+
+::: {style="text-align: center;"}
+<img src="images/Food7.png" width="300"/>
+
+<p><em>**Chorizo** — This is a dish that my mother will cook on very special occasions. Chorizo is seasoned pork sausage that we combine with a cubed potatoe to create a hearty savory dish.</em></p>
+:::
+
+:::
