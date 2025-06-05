@@ -4,14 +4,14 @@
     "href": "ProjectPage.html",
     "title": "Projects",
     "section": "",
-    "text": "The Unhealthy Relationship Between Humans and Wildlife in America\n\n\n\nReports\n\n\n\n\n\n\n\nAlexa Andrade\n\n\nJun 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAverage time Spent Cooking throughout the week\n\n\n\nQuarto\n\n\nR\n\n\n\nA visulization of personal data I collected through the Spring 2025 quarter\n\n\n\nAlexa Andrade\n\n\nMay 31, 2025\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "The Unhealthy Relationship Between Humans and Wildlife in America\n\n\n\nReports\n\n\n\nA detailed report that discusses the current status of wildlife in America, as well as clarifies the lack of coexistance. The report also investigates potential solutions.\n\n\n\nAlexa Andrade\n\n\nJun 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAverage time Spent Cooking throughout the week\n\n\n\nQuarto\n\n\nR\n\n\n\nA visulization of personal data I collected through the Spring 2025 quarter\n\n\n\nAlexa Andrade\n\n\nMay 31, 2025\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html#traveling",
     "href": "about.html#traveling",
     "title": "About Me",
     "section": "Traveling",
-    "text": "Traveling\nI Love to travel and explore new places! I have been lucky enough to grow up in a family that also enjoys exploring, whether it be regional cities or far away countries. It is still my dream to have a job that gives me the opportunity to travel a couple weeks out of the year. Some of the places I’ve been include the Bahamas, Mexico, New York, and Florida."
+    "text": "Traveling\nI Love to travel and explore new places! I have been lucky enough to grow up in a family that also enjoys exploring, whether it be regional cities or far away countries. It is still my dream to have a job that gives me the opportunity to travel a couple weeks out of the year. Some of the places I’ve been include the Bahamas, Mexico, New York, and Florida.\n\n\n\n\n\n\n\n\n\nView on Maui-Kula Pulehunui Mountain\n\n\n\n\n\n\n\nCancun Sunset\n\n\n\n\n\n\n\nCloudy New York, view from Central Park"
   },
   {
     "objectID": "about.html#an-interactive-map-of-my-travel-destination",
@@ -25,14 +25,14 @@
     "href": "about.html#pets",
     "title": "About Me",
     "section": "Pets",
-    "text": "Pets\nI am a dog lover, and I will continue to be one for the rest of my life. When I was younger I grew up with two brother Lhasa Ahpsos that were small but mighty. I love how dogs have combine loyalty and constant love, in a way that truly makes them life companions. I currently have a young 4 year old Springer Spaniel named Traviesa, otherwise known as Naughty in english. I love to spend time with her on walks or playing her favorite pass time: fetch."
+    "text": "Pets\nI am a dog lover, and I will continue to be one for the rest of my life. When I was younger I grew up with two brother Lhasa Ahpsos that were small but mighty. I love how dogs have combine loyalty and constant love, in a way that truly makes them life companions. I currently have a young 4 year old Springer Spaniel named Traviesa, otherwise known as Naughty in english. I love to spend time with her on walks or playing her favorite pass time: fetch.\n\n\n\n\n\n\n\n\n\nTraviesa, or the english name I gave her: Truffles\n\n\n\n\n\n\n\nTraviesa after she ran into her dog pool, and sees me holding the ball\n\n\n\n\n\n\n\nTraviesa at Avala Beach"
   },
   {
-    "objectID": "about.html#hometwon",
-    "href": "about.html#hometwon",
+    "objectID": "about.html#hometown",
+    "href": "about.html#hometown",
     "title": "About Me",
-    "section": "Hometwon",
-    "text": "Hometwon\nI am a southern Californian at heart, and I grew up in a suburban town called West Covina, or what I like to call-The best Covina. West Covina is a city in Los Angeles county that has a population of about 109,000. West Covina is famous for being the shooting location of the show “Crazy Ex-Girlfriend”, and the movie “Good Burger”."
+    "section": "Hometown",
+    "text": "Hometown\nI am a southern Californian at heart, and I grew up in a suburban town called West Covina, or what I like to call-The best Covina. West Covina is a city in Los Angeles county that has a population of about 109,000. West Covina is famous for being the shooting location of the show “Crazy Ex-Girlfriend”, and the movie “Good Burger”.\n\n\n\n\n\n\n\n\n\nOne of the tallest buildings in West Covina, the headquarters for Jollybee. This is one of the largest signs that you’re in West Covina\n\n\n\n\n\n\n\nThe courtyard of South Hills High School, the high school I went you\n\n\n\n\n\n\n\nA semi-famous road in West Covina"
   },
   {
     "objectID": "posts/2025:blogs/index.html",
@@ -53,7 +53,7 @@
     "href": "posts/2025:blogs/index.html#creating-a-table-summary-of-statitsics-for-my-data",
     "title": "Average time Spent Cooking throughout the week",
     "section": "Creating a table summary of statitsics for my Data",
-    "text": "Creating a table summary of statitsics for my Data\n\n\nShow code\nCooking_clean &lt;- read_xlsx(here(\"Data\", \"Cooking_timeF.xlsx\")) |&gt; #Reading in my data \nclean_names() #Standarizing \n\n#Creating a summary \nCooking_summary &lt;- Cooking_clean |&gt; #Creating new object \n  group_by(school_day) |&gt; #Seperating statistics by school day: Y or N\n  summarise(\n    mean = mean(minutes_spent_cooking_min),        # Calculate mean \n    n = n(),                              # Count number of observations\n    sd = sd(minutes_spent_cooking_min),            # Calculate standard deviation\n    se = sd / sqrt(n),                   # Calculate standard error\n    ci_lower = mean - qt(0.975, df = n - 1) * se,  # 95% CI lower bound\n    ci_upper = mean + qt(0.975, df = n - 1) * se   # 95% CI upper bound\n  ) |&gt;\n  mutate(\n    across(c(mean, sd, se, ci_lower, ci_upper), ~round(.x, 1))  # Round values\n  ) |&gt;\n  select(school_day, mean, sd, se, ci_lower, ci_upper)  # Select final columns\n\nCooking_summary &lt;- Cooking_summary |&gt; #Renaming the categories in school_day column to be full labels \n  mutate(school_day = recode(school_day,\n                             \"N\" = \"Non-School Day\",\n                             \"Y\" = \"School Day\"))\n\nCooking_summary |&gt;\n  flextable() |&gt; #creating table \n  set_header_labels(\n    school_day = \"Status of Day\", #x-axis label\n    mean = \"Mean\",\n    sd = \"Standard Deviation\",\n    se = \"Standard Error\",\n    ci_lower = \"95% CI Lower\",\n    ci_upper = \"95% CI Upper\" ) |&gt;\n  set_caption(\"Summary Statistics of Cooking Time by School Day\") |&gt; #Name of the table \n  autofit()\n\n\nStatus of DayMeanStandard DeviationStandard Error95% CI Lower95% CI UpperNon-School Day24.826.68.45.843.8School Day31.822.44.722.141.5"
+    "text": "Creating a table summary of statitsics for my Data\nThe main statistic that I wanted to compare was the mean time spent cooking for school and non-school days. However, I decided to also calculate standard deviation, standard error, and the Confidence Intervals for both types of days, so that I, and my audience, could have more statistical context.\n\n\nShow code\nCooking_clean &lt;- read_xlsx(here(\"Data\", \"Cooking_timeF.xlsx\")) |&gt; #Reading in my data \nclean_names() #Standarizing \n\n#Creating a summary \nCooking_summary &lt;- Cooking_clean |&gt; #Creating new object \n  group_by(school_day) |&gt; #Seperating statistics by school day: Y or N\n  summarise(\n    mean = mean(minutes_spent_cooking_min),        # Calculate mean \n    n = n(),                              # Count number of observations\n    sd = sd(minutes_spent_cooking_min),            # Calculate standard deviation\n    se = sd / sqrt(n),                   # Calculate standard error\n    ci_lower = mean - qt(0.975, df = n - 1) * se,  # 95% CI lower bound\n    ci_upper = mean + qt(0.975, df = n - 1) * se   # 95% CI upper bound\n  ) |&gt;\n  mutate(\n    across(c(mean, sd, se, ci_lower, ci_upper), ~round(.x, 1))  # Round values\n  ) |&gt;\n  select(school_day, mean, sd, se, ci_lower, ci_upper)  # Select final columns\n\nCooking_summary &lt;- Cooking_summary |&gt; #Renaming the categories in school_day column to be full labels \n  mutate(school_day = recode(school_day,\n                             \"N\" = \"Non-School Day\",\n                             \"Y\" = \"School Day\"))\n\nCooking_summary |&gt;\n  flextable() |&gt; #creating table \n  set_header_labels(\n    school_day = \"Status of Day\", #x-axis label\n    mean = \"Mean\",\n    sd = \"Standard Deviation\",\n    se = \"Standard Error\",\n    ci_lower = \"95% CI Lower\",\n    ci_upper = \"95% CI Upper\" ) |&gt;\n  set_caption(\"Summary Statistics of Cooking Time by School Day\") |&gt; #Name of the table \n  autofit()\n\n\nStatus of DayMeanStandard DeviationStandard Error95% CI Lower95% CI UpperNon-School Day24.826.68.45.843.8School Day31.822.44.722.141.5"
   },
   {
     "objectID": "posts/2025:blogs/index.html#utilizing-a-jitter-plot-to-display-the-means-of-my-two-categories-school-day-and-non-school-day",
@@ -88,7 +88,7 @@
     "href": "posts/2025:blogs/Paper.html",
     "title": "The Unhealthy Relationship Between Humans and Wildlife in America",
     "section": "",
-    "text": "This browser does not support PDFs. &lt;a href=\"ENVS116.pdf\"&gt;Download PDF&lt;/a&gt;"
+    "text": "This report was created originally during Fall quarter of 2024, at UCSB, for ENVS 116: Communities and Environmental Justice. I was inspired by my Hometown, West Covina, because coyotes are a daily occurrence. I never realized how many people viewed coyotes as pests or labelled them solely as dangerous. So, I wanted to explore how wildlife are treated around the US, and explore potential solutions.\n\nThis browser does not support PDFs. &lt;a href=\"ENVS116.pdf\"&gt;Download PDF&lt;/a&gt;"
   },
   {
     "objectID": "index.html",

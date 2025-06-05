@@ -19,8 +19,6 @@ execute:
 
 Environmentalists work in many sectors, and are employed in a variety of roles that require different skill sets. Therefore, as an environmental science student, it is critical to equip myself for the future and the job market by developing new skills. ENVS 193DS did exactly that. 
 
-![](~/Desktop/Users:Alexa:git/personalwebsite2.0/posts/Cookblog.png) 
-
 
 The class built my foundation in coding in R, equiping me with the confidence to go one and fo my own personal project. This specific personal project was fostered by my curiosity: Do I on average spend more time cooking on school days or non school days? 
 
@@ -49,6 +47,8 @@ library(flextable)
 ```
 
 ## Creating a table summary of statitsics for my Data
+The main statistic that I wanted to compare was the mean time spent cooking for school and non-school days. However, I decided to also calculate standard deviation, standard error, and the Confidence Intervals for both types of days, so that I, and my audience, could have more statistical context. 
+
 ```{r}
 Cooking_clean <- read_xlsx(here("Data", "Cooking_timeF.xlsx")) |> #Reading in my data 
 clean_names() #Standarizing 
